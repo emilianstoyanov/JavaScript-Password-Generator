@@ -267,9 +267,56 @@ input[type=checkbox] {
 
 .password-toggle input[type="checkbox"] {
     transform: scale(1.5);
+    margin-right: 12px; /* Adjust the distance from the eye icon */
+}
+
+.password-toggle .far.fa-eye {
+    font-size: 10px; /* Adjust the eye icon size */
 }
 
 /* Style for when the checkbox is checked */
 .password-toggle input[type="checkbox"]:checked + label::before {
     content: '👁'; /* You can use any other icon or text here */
+}
+
+/* Add this CSS to style the toggle button and position it */
+.password-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.password-toggle {
+    border: none;
+    background: none;
+    color: #983b3b;
+    font-size: 34px;
+    cursor: pointer;
+
+}
+
+
+/* Add a CSS class for the clicked effect */
+.clicked {
+    transform: scale(0.95); /* Add a slight scaling effect */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a slight shadow effect */
+}
+
+/* Apply transitions for smooth animation */
+.btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Apply transitions for smooth animation for the copy button */
+#clipboard {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Change color on hover */
+.btn:hover {
+    background-color: #4a4aaf;
+}
+
+/* Change color on hover for the copy button */
+#clipboard:hover {
+    background-color: #4a4aaf;
 }

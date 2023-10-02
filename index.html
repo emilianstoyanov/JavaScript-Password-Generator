@@ -13,11 +13,18 @@
   <body>
     <div class="container">
 
+        <h2 class="password-heading">
+            Password Generator
+            <button id="toggle-visibility" class="password-toggle">
+                <i class="far fa-eye"></i>
+            </button>
+        </h2>
       
-        <h2>Password Generator</h2>
         <!-- Copy message -->
         <div id="copy-message"></div>
         <div class="result-container">
+          
+              
             <span id="result"></span>
             <button class="btn" >
                 <button class="btn" id="clipboard">
@@ -47,6 +54,8 @@
                     <label>Include symbols</label> 
                     <input type="checkbox" id="symbols" checked />
                 </div>
+               
+                
             </div>
             <button class="btn btn-large" id="generate">
                 Generate password

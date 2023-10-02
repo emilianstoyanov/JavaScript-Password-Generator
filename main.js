@@ -132,3 +132,40 @@ function copyPasswordToClipboard(password) {
     }, 3000); // Hide the message after 2 seconds (2000 milliseconds)
   }
   
+
+
+const toggleVisibilityButton = document.getElementById('toggle-visibility');
+
+// Event listener to toggle password visibility
+toggleVisibilityButton.addEventListener('click', () => {
+  const password = getPasswordForCopying();
+
+  if (!password) {
+    return;
+  }
+
+  // Toggle visibility by switching between actual password and asterisks
+  if (resultEl.innerText === password) {
+    resultEl.innerText = '*'.repeat(password.length);
+  } else {
+    resultEl.innerText = password;
+  }
+});
+
+
+const generateButton = document.getElementById('generate');
+const copyButton = document.getElementById('clipboard');
+
+generateButton.addEventListener('click', () => {
+    generateButton.classList.add('clicked');
+    setTimeout(() => {
+        generateButton.classList.remove('clicked');
+    }, 200);
+});
+
+copyButton.addEventListener('click', () => {
+    copyButton.classList.add('clicked');
+    setTimeout(() => {
+        copyButton.classList.remove('clicked');
+    }, 200);
+});
