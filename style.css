@@ -363,7 +363,7 @@ body::before {
 .password-toggle .fa-eye {
     font-size: 24px; /* Adjust the font size to make the eye bigger */
     color: #3498db; /* Change the color to a variegated color, you can choose any color you like */
-    transition: color 0.2s;
+    transition: color 1s;
 }
 
 /* Change the eye color on hover */
