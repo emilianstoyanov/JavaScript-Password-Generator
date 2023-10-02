@@ -320,3 +320,16 @@ input[type=checkbox] {
 #clipboard:hover {
     background-color: #4a4aaf;
 }
+
+/* Add styles for the eye icon */
+.password-toggle .fa-eye {
+    font-size: 24px; /* Adjust the font size to make the eye bigger */
+    color: #3498db; /* Change the color to a variegated color, you can choose any color you like */
+    transition: color 0.2s;
+}
+
+/* Change the eye color on hover */
+.password-toggle:hover .fa-eye {
+    color: #e74c3c; /* Change the color on hover */
+}
+
