@@ -282,12 +282,22 @@ input[type=checkbox] {
     content: '👁'; /* You can use any other icon or text here */
 }
 
-/* Add this CSS to style the toggle button and position it */
 .password-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative; /* Make the container relative */
+  }
+  
+.copy-message {
+	position: absolute; /* Position the message absolutely within the container */
+	top: 100%; /* Position it just below the .password-heading */
+	left: 0;
+	display: none;
+	padding-top: 10px; /* Add some padding for spacing */
+  }
+  
+  
 .password-toggle {
     border: none;
     background: none;
@@ -373,5 +383,7 @@ body::before {
 .password-toggle:hover .fa-eye {
     color: #e74c3c; /* Change the color on hover */
 }
+
+
 
 
