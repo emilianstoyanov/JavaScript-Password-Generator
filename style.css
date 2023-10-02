@@ -271,7 +271,7 @@ input[type=checkbox] {
 }
 
 .password-toggle .far.fa-eye {
-    font-size: 10px; /* Adjust the eye icon size */
+    font-size: 25px; /* Adjust the eye icon size */
 }
 
 /* Style for when the checkbox is checked */
