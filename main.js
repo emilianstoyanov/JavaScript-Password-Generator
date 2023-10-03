@@ -174,10 +174,35 @@ copyButton.addEventListener('click', () => {
 const lengthRangeEl = document.getElementById('lengthRange');
 const lengthValueEl = document.getElementById('lengthValue');
 
+// Event listener to update password length display
 lengthRangeEl.addEventListener('input', () => {
     const length = lengthRangeEl.value;
     lengthValueEl.textContent = length;
 });
+
+// Event listener to show password length as a popup on mobile
+lengthRangeEl.addEventListener('touchmove', () => {
+    const length = lengthRangeEl.value;
+    showPasswordLengthPopup(length);
+});
+
+function showPasswordLengthPopup(length) {
+    // Create a popup element
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.textContent = `Password length: ${length}`;
+
+    // Position the popup at the top of the page
+    popup.style.top = '0';
+
+    // Append the popup to the body
+    document.body.appendChild(popup);
+
+    // Hide the popup after a short delay
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 2000);
+}
 
 generateEl.addEventListener('click', () => {
     const length = +lengthRangeEl.value;
