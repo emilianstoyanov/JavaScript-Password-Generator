@@ -1,3 +1,8 @@
+![image](https://github.com/emilianstoyanov/JavaScript-Password-Generator/assets/68276889/8c8fc088-6a74-40a9-bd5e-af0fadf99bc2)
+
+
+
+
 
 
 ## Key Features:
