@@ -182,3 +182,6 @@ lengthRangeEl.addEventListener('input', () => {
 generateEl.addEventListener('click', () => {
     const length = +lengthRangeEl.value;
 });
+
+
+
