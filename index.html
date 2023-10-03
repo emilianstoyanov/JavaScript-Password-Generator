@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Generate highly secure and random passwords effortlessly with our online password generator. 
+    Create strong passwords with customizable options for enhanced security. Protect your online accounts with unique and cryptographically secure passwords.">
+    <meta name="keywords" content="Password generator,Random password,Secure password,
+    Strong password,Password strength,Password complexity,Password security,Password manager,
+    Generate secure passwords,Password creation tool,Password algorithm,Password pattern,
+    Password length,Password characters,Password options,Password suggestions,Online password generator,
+    Password best practices,Unique passwords,Cryptographically secure passwords,Customizable password generator,
+    Secure and random password creator,Generate passwords with specific criteria,Password generator for online accounts">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PasswordWizard</title>
@@ -34,24 +42,34 @@
                 
         </div>
         <div class="settings">
+            <!-- <div class="setting">
+                <label>Password length</label>
+
+                <input type="number" id="length" min='3' max='20' value='10' />
+
+                <input type="number" id="length" min='4' max='20' value='20' />
+            </div> -->
+
             <div class="setting">
                 <label>Password length</label>
-                <input type="number" id="length" min='3' max='20' value='10' />
+                <input type="range" id="lengthRange" min="4" max="50" value="20" />
+                <span id="lengthValue">20</span>
+
             </div>
             <div class="setting">
-                <label>Include uppercase letters</label> 
+                <label>Include uppercase letters (ABC)</label> 
                 <input type="checkbox" id="uppercase" checked />
             </div>
                 <div class="setting">
-                    <label>Include lowercase letters</label> 
+                    <label>Include lowercase letters (abc)</label> 
                     <input type="checkbox" id="lowercase" checked />
                 </div>
                 <div class="setting">
-                    <label>Include numbers</label> 
+                    <label>Include numbers (0-9)</label> 
                     <input type="checkbox" id="numbers" checked />
                 </div>
                 <div class="setting">
-                    <label>Include symbols</label> 
+                    <label>Include symbols (!@#$^&*(){}[]=<>/,.)</label> 
                     <input type="checkbox" id="symbols" checked />
                 </div>
                

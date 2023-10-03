@@ -17,22 +17,23 @@ const randomFunc = {
 
 // Generate event listener
 generateEl.addEventListener('click', () => {
-  const length = +lengthEl.value;
+  const length = +lengthRangeEl.value;
   const hasLower = lowercaseEl.checked;
   const hasUpper = uppercaseEl.checked;
   const hasNumber = numbersEl.checked;
   const hasSymbol = symbolsEl.checked;
 
   const generatedPassword = generatePassword(
-    hasLower,
-    hasUpper,
-    hasNumber,
-    hasSymbol,
-    length
+      hasLower,
+      hasUpper,
+      hasNumber,
+      hasSymbol,
+      length
   );
 
   displayPasswordAsAsterisks(generatedPassword);
 });
+
 
 // Copy password to clipboard
 clipboardEl.addEventListener('click', () => {
@@ -48,28 +49,27 @@ clipboardEl.addEventListener('click', () => {
 // Generate password function
 function generatePassword(lower, upper, number, symbols, length) {
   let generatedPassword = '';
-
   const typesCount = lower + upper + number + symbols;
-
   const typesArr = [{ lower }, { upper }, { number }, { symbols }].filter(
-    item => Object.values(item)[0]
+      item => Object.values(item)[0]
   );
 
   if (typesCount === 0) {
-    return '';
+      return '';
   }
 
   for (let i = 0; i < length; i += typesCount) {
-    typesArr.forEach(type => {
-      const funcName = Object.keys(type)[0];
-      generatedPassword += randomFunc[funcName]();
-    });
+      typesArr.forEach(type => {
+          const funcName = Object.keys(type)[0];
+          generatedPassword += randomFunc[funcName]();
+      });
   }
 
   const finalPassword = generatedPassword.slice(0, length);
 
   return finalPassword;
 }
+
 
 // Generator functions
 function getRandomLower() {
@@ -168,4 +168,17 @@ copyButton.addEventListener('click', () => {
     setTimeout(() => {
         copyButton.classList.remove('clicked');
     }, 200);
+});
+
+
+const lengthRangeEl = document.getElementById('lengthRange');
+const lengthValueEl = document.getElementById('lengthValue');
+
+lengthRangeEl.addEventListener('input', () => {
+    const length = lengthRangeEl.value;
+    lengthValueEl.textContent = length;
+});
+
+generateEl.addEventListener('click', () => {
+    const length = +lengthRangeEl.value;
 });
