@@ -65,7 +65,7 @@ input[type=checkbox] {
 	  radial-gradient(at 27% 71%, hsla(336,91%,65%,1) 0, transparent 49%), 
 	  radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%), 
 	  radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
-  }
+}
 
 
 
@@ -101,14 +101,7 @@ input[type=checkbox] {
 	width: 40px;
 }
 
-.btn {
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	padding: 8px 12px;
-	background-color: #3B3B98;
-}
+
 
 .btn-large {
 	display: block;
@@ -290,13 +283,15 @@ input[type=checkbox] {
 }
 
 
-/* Add this CSS to style the toggle button */
-
 .password-toggle {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+    border: none;
+    background: none;
+    color: #983b3b;
+    font-size: 34px;
+    cursor: pointer;
+
 }
+
 
 .password-toggle label {
     margin-right: 10px;
@@ -321,6 +316,7 @@ input[type=checkbox] {
 	justify-content: space-between;
 	align-items: center;
 	position: relative; /* Make the container relative */
+	font-size: 23px;
   }
   
 .copy-message {
@@ -331,16 +327,6 @@ input[type=checkbox] {
 	padding-top: 10px; /* Add some padding for spacing */
   }
   
-  
-.password-toggle {
-    border: none;
-    background: none;
-    color: #983b3b;
-    font-size: 34px;
-    cursor: pointer;
-
-}
-
 
 /* Add a CSS class for the clicked effect */
 .clicked {
@@ -385,6 +371,8 @@ input[type=checkbox] {
     transition: color 0.2s;
 }
 
+
+
 /* Change the eye color on hover */
 .password-toggle:hover .fa-eye {
     color: #e74c3c; /* Change the color on hover */
@@ -403,18 +391,4 @@ body::before {
     background-color: #4a4aaf;
 	/*background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)); /* Adjust opacity as needed */
     z-index: -1;
-}
-
-/* Rest of your existing styles go here */
-
-/* Styles for the eye icon */
-.password-toggle .fa-eye {
-    font-size: 24px; /* Adjust the font size to make the eye bigger */
-    color: #3498db; /* Change the color to a variegated color, you can choose any color you like */
-    transition: color 1s;
-}
-
-/* Change the eye color on hover */
-.password-toggle:hover .fa-eye {
-    color: #e74c3c; /* Change the color on hover */
 }
