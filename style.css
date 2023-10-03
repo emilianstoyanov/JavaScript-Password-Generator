@@ -380,6 +380,8 @@ input[type=checkbox] {
     font-size: 24px; /* Adjust the font size to make the eye bigger */
     color: #3498db; /* Change the color to a variegated color, you can choose any color you like */
     transition: color 0.2s;
+	content: '\f06e'; /* Change the content to the Unicode for a different eye icon */
+    font-family: 'Font Awesome 5 Free'; /* Specify Font Awesome family */
 }
 
 
