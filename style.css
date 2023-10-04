@@ -339,7 +339,6 @@ input[type=checkbox] {
   }
   
 
-/* Add a CSS class for the clicked effect */
 .clicked {
     transform: scale(0.95); /* Add a slight scaling effect */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a slight shadow effect */
@@ -375,7 +374,7 @@ input[type=checkbox] {
     background-color: #4a4aaf;
 }
 
-/* Add styles for the eye icon */
+
 .password-toggle .fa-eye {
     font-size: 24px; /* Adjust the font size to make the eye bigger */
     color: #3498db; /* Change the color to a variegated color, you can choose any color you like */
@@ -385,15 +384,11 @@ input[type=checkbox] {
 }
 
 
-
-/* Change the eye color on hover */
 .password-toggle:hover .fa-eye {
     color: #e74c3c; /* Change the color on hover */
 }
 
 
-
-/* Add fog effect to the background */
 body::before {
     content: "";
     position: fixed;
